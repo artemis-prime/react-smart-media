@@ -1,18 +1,18 @@
 {
-  "name": "@artemis-prime/smart-media",
+  "name": "@artemis-prime/react-smart-media",
   "version": "1.0.0",
   "description": "react image and video components with smarts.",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artemis-prime/smart-media.git"
+    "url": "git+https://github.com/artemis-prime/react-smart-media.git"
   },
   "author": "artemis-prime",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/artemis-prime/smart-media/issues"
+    "url": "https://github.com/artemis-prime/react-smart-media/issues"
   },
-  "homepage": "https://github.com/artemis-prime/smart-media#readme",
+  "homepage": "https://github.com/artemis-prime/react-smart-media#readme",
   "dependencies": {
     "@artemis-prime/logger": "^1.0.2",
     "@artemis-prime/math-utils": "^1.0.0",
