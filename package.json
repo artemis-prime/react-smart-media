@@ -1,6 +1,6 @@
 {
   "name": "@artemis-prime/react-smart-media",
-  "version": "1.0.5",
+  "version": "1.0.11",
   "description": "react image and video components with smarts.",
   "main": "index.js",
   "repository": {

@@ -37,14 +37,26 @@ class SmartVideo extends React.Component {
 			this.elem.load();	// reloads the poster image
 		});
 
-		this.loadVideo(this.props);
-	}
-
-	componentWillReceiveProps(props) {
-		this.loadVideo(props);
+	  	if (this.props.scaling === 'adjust-within') {
+  			this.loadVideo(this.props);
+  		}
+  		else {
+  			setTimeout(
+  				() => {
+  					this.loadVideo(this.props);
+  				},
+  				300
+  			)
+  		}
 	}
 
 	loadVideo(props) {
+		if (props.dim) {
+			this.natural = props.dim;
+			this.adjustVideoDimensions(props);
+			return;
+		}
+
 		let eventsFired = 0;
 		let _this = this;
 

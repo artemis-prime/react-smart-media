@@ -20,14 +20,26 @@ class SmartImage extends React.Component {
 	}
 
 	componentDidMount() {
-		this.loadImage(this.props);
-	}
-
-	componentWillReceiveProps(props) {
-		this.loadImage(props);
+		if (this.props.scaling === 'adjust-within') {
+			this.loadImage(this.props);
+		}
+		else {
+			setTimeout(
+				() => {
+					this.loadImage(this.props);
+				},
+				200
+			)
+		}
 	}
 
 	loadImage(props) {
+		if (props.dim) {
+			this.natural = props.dim;
+			this.adjustImageDimensions(props);
+			return;
+		}
+
 		let img = new Image();
 		img.onload = () => {
 			this.natural = {
