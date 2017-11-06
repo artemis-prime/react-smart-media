@@ -100,10 +100,11 @@ class SmartImage extends React.Component {
 		let style = {
 			width: this.state.width,
 			height: this.state.height
-		}
+		};
 
-		// if we have a wrapper, save it for that.
-		let imgTagClassName = (this.props.noWrapper) ? this.props.className : '';
+		let clazzName = (this.props.className) ? this.props.className : '';
+			// If we have a wrapper, apply the className to that.
+		let imgTagClassName = (this.props.noWrapper) ? clazzName : '';
 
 		let imgMarkup =
 			<img
@@ -120,7 +121,7 @@ class SmartImage extends React.Component {
 		}
 
 		return (
-			<div className={"img-outer " + this.props.className} style={style}>
+			<div className={"img-outer " + clazzName} style={style}>
 				{imgMarkup}
 				{this.props.children}
 			</div>

@@ -136,9 +136,10 @@ class SmartVideo extends React.Component {
 			width: this.state.width,
 			height: this.state.height
 		}
-
-			// if we have a wrapper, save it for that.
-		let videoTagClassName = (this.props.noWrapper) ? className : '';
+			// vs. 'undefined'
+		let clazzName = (className) ? className : '';
+			// If we have a wrapper, apply the className to that.
+		let videoTagClassName = (this.props.noWrapper) ? clazzName : '';
 		let videoMarkup =
 			<video
 				id={this.id}
@@ -155,7 +156,7 @@ class SmartVideo extends React.Component {
 		}
 
 		return (
-			<div className={"video-outer " + className} style={style}>
+			<div className={"video-outer " + clazzName} style={style}>
 				{videoMarkup}
 				{this.props.children}
 			</div>
